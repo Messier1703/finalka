@@ -1,19 +1,20 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
-
-const { Header } = Layout;
+import s from './AppHeader.module.scss'
 
 function AppHeader() {
   return (
-    <Header className="header">
-      <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-        <Menu.Item key="1">Home</Menu.Item>
-        <Menu.Item key="2">About Us</Menu.Item>
-        <Menu.Item key="3">Services</Menu.Item>
-        <Menu.Item key="4">Contact Us</Menu.Item>
-      </Menu>
-    </Header>
+    <header className={s.header}>
+      <div className="container">
+        <div className={s.header_nav}>
+          <a href="#" className={s.header_logo}>huy</a>
+          <div className={s.header__links}>
+          <a href="#" className={s.header_link}>link</a>
+          <a href="#" className={s.header_link}>link</a>
+          <a href="#" className={s.header_link}>link</a>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
 
