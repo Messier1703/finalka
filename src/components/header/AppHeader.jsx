@@ -6,7 +6,7 @@ function AppHeader() {
     <header className={s.header}>
       <div className="container">
         <div className={s.header_nav}>
-          <a href="#" className={s.header_logo}>huy</a>
+          <a href="#" className={s.header_logo}>logo</a>
           <div className={s.header__links}>
           <a href="#" className={s.header_link}>link</a>
           <a href="#" className={s.header_link}>link</a>

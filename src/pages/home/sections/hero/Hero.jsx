@@ -14,8 +14,8 @@ function Hero() {
           </div>
         </nav>
         <div className={s.hero_text}>
-          <h1 className={s.hero_title}>Lorem ipsum</h1>
-          <p className="hero_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi vitae repudiandae laudantium libero fugit quibusdam, mollitia at, molestias, recusandae sed debitis autem itaque. Aliquam impedit perferendis facere dolores necessitatibus odio!</p>
+          <h1 className={s.hero_title}>Экобокс</h1>
+          <p className="hero_desc">Сервис для поставки экоящиков</p>
         </div>
       </div>
     </section>

@@ -47,25 +47,21 @@ const ManagerPage = () => {
     }, []);
 
     const handleAssignToBrigade = (applicationId, brigadeId) => {
-        const headers = {
-            "Authorization": `Bearer ${localStorage.getItem('token')}`,
-            "Content-Type": "application/json"
-        };
         axios.post(
-            `https://ecoboxwebapi20230517185257.azurewebsites.net/api/Manager/assingToBrigade?applicationId=${applicationId}`,
-            { brigadeId },
-            { headers }
+          `https://ecoboxwebapi20230517185257.azurewebsites.net/api/Manager/assingToBrigade?applicationId=${applicationId}`,
+          { brigadeId: Number(brigadeId) },
+          { headers }
         )
-            .then(() => {
-                message.success('Assigned to brigade successfully!');
-                // You can perform any additional action here, such as updating the UI
-                setIsModalVisible(false);
-            })
-            .catch((error) => {
-                console.error('Error assigning to brigade:', error);
-                message.error('Failed to assign to brigade. Please try again.');
-            });
-    };
+          .then(() => {
+            message.success('Assigned to brigade successfully!');
+            // You can perform any additional action here, such as updating the UI
+            setIsModalVisible(false);
+          })
+          .catch((error) => {
+            console.error('Error assigning to brigade:', error);
+            message.error('Failed to assign to brigade. Please try again.');
+          });
+      };
 
     const showModal = (applicationId) => {
         setSelectedApplicationId(applicationId);
